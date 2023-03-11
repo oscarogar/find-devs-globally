@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-*=mo*z#dq-)g*j1cvzb$&9j_h1$!5&od^u$t!i_r#m3n72@m^-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1',  'https://getadev.herokuapp.com/']
 
 
 # Application definition
@@ -150,3 +150,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+if os.getcwd() == '/app':
+    DEBUG = False
+    
